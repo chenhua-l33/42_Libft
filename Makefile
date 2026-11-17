@@ -6,7 +6,7 @@
 #    By: chenhli <chenhli@learner.42.tech>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/10 16:40:57 by chenhli           #+#    #+#              #
-#    Updated: 2026/11/11 20:46:18 by chenhli          ###   ########.fr        #
+#    Updated: 2026/11/17 15:57:15 by chenhli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,7 @@ NAME := libft.a
 
 # **************************************************************************** #
 # Sources #
-SRCS :=
-SRCS += ft_isalpha.c
+SRCS := ft_isalpha.c
 SRCS += ft_isdigit.c
 SRCS += ft_isalnum.c
 SRCS += ft_isascii.c
