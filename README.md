@@ -10,6 +10,7 @@ This beginner project in C involves implementing a custom library in C.
 # Instructions
 
 ## Build
+```bash
 make        # builds libft.a
 
 make clean  # remove object files
@@ -17,6 +18,7 @@ make clean  # remove object files
 make fclean # remove object files and libft.a
 
 make re     # fclean + make
+```
 
 # Resources
 
