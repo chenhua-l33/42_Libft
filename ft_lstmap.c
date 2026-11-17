@@ -6,7 +6,7 @@
 /*   By: chenhli <chenhli@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 21:00:48 by chenhli           #+#    #+#             */
-/*   Updated: 2026/11/16 12:33:51 by chenhli          ###   ########.fr       */
+/*   Updated: 2026/11/17 18:07:32 by chenhli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*node;
+	void	*content;
 
 	t_list *(new_head) = NULL;
 	t_list *(new_tail) = NULL;
@@ -22,10 +23,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		node = ft_lstnew(content);
 		if (!node)
 		{
 			ft_lstclear(&new_head, del);
+			del(content);
 			return (NULL);
 		}
 		if (!new_head)
