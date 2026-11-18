@@ -6,7 +6,7 @@
 /*   By: chenhli <chenhli@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 10:21:55 by chenhli           #+#    #+#             */
-/*   Updated: 2026/11/17 16:31:06 by chenhli          ###   ########.fr       */
+/*   Updated: 2026/11/18 10:50:57 by chenhli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big_mut[i] && i < len)
 	{
 		j = 0;
-		while (big_mut[i + j] == little[j] && little[j] && i + j < len)
+		while (i + j < len && big_mut[i + j] == little[j] && little[j])
 			++j;
 		if (!little[j])
 			return (big_mut + i);
