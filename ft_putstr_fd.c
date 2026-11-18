@@ -6,7 +6,7 @@
 /*   By: chenhli <chenhli@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:25:49 by chenhli           #+#    #+#             */
-/*   Updated: 2026/11/06 19:29:39 by chenhli          ###   ########.fr       */
+/*   Updated: 2026/11/18 09:52:52 by chenhli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int (i) = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		++i;
-	}
+	write(fd, s, ft_strlen(s));
 }

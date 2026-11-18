@@ -6,7 +6,7 @@
 /*   By: chenhli <chenhli@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 20:28:08 by chenhli           #+#    #+#             */
-/*   Updated: 2026/11/15 20:13:14 by chenhli          ###   ########.fr       */
+/*   Updated: 2026/11/17 18:39:15 by chenhli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	t_list	*cur_next;
+
 	if (!lst)
 		return ;
 	if (!*lst)
 		return ;
 	t_list *(cursor) = *lst;
-	t_list *(cur_next) = cursor;
 	while (cursor)
 	{
 		cur_next = cursor->next;
